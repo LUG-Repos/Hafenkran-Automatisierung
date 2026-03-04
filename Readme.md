@@ -8,7 +8,8 @@ Softwarelösung zu entwickeln, die den Kran eigenständig steuert: Container erk
 transportiert und präzise auf den Zielwaggon des Güterzugs absetzt — ohne manuellen Eingriff.
 
 
-![alt text](image.png)
+<img width="1218" height="778" alt="image" src="https://github.com/user-attachments/assets/491d4f73-b491-49ce-9bfd-50ffc091e38c" />
+
 ---
 
 ## Aufgaben

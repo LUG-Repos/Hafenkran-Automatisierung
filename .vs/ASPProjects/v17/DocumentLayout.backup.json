@@ -1,0 +1,72 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\milutz\\Documents\\Lutz_Grub\\Unterricht\\Unterricht\\CSharp OOP\\ASPTest\\ASPProjects\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A448A080-E5B2-4FE5-869B-63272728F52A}|DataManager\\DataManager.csproj|c:\\users\\milutz\\documents\\lutz_grub\\unterricht\\unterricht\\csharp oop\\asptest\\aspprojects\\datamanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A448A080-E5B2-4FE5-869B-63272728F52A}|DataManager\\DataManager.csproj|solutionrelative:datamanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A448A080-E5B2-4FE5-869B-63272728F52A}|DataManager\\DataManager.csproj|c:\\users\\milutz\\documents\\lutz_grub\\unterricht\\unterricht\\csharp oop\\asptest\\aspprojects\\datamanager\\datamanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A448A080-E5B2-4FE5-869B-63272728F52A}|DataManager\\DataManager.csproj|solutionrelative:datamanager\\datamanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A448A080-E5B2-4FE5-869B-63272728F52A}|DataManager\\DataManager.csproj|c:\\users\\milutz\\documents\\lutz_grub\\unterricht\\unterricht\\csharp oop\\asptest\\aspprojects\\datamanager\\crane.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A448A080-E5B2-4FE5-869B-63272728F52A}|DataManager\\DataManager.csproj|solutionrelative:datamanager\\crane.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\milutz\\Documents\\Lutz_Grub\\Unterricht\\Unterricht\\CSharp OOP\\ASPTest\\ASPProjects\\DataManager\\Program.cs",
+              "RelativeDocumentMoniker": "DataManager\\Program.cs",
+              "ToolTip": "C:\\Users\\milutz\\Documents\\Lutz_Grub\\Unterricht\\Unterricht\\CSharp OOP\\ASPTest\\ASPProjects\\DataManager\\Program.cs",
+              "RelativeToolTip": "DataManager\\Program.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAASwEIAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-03T12:31:39.142Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DataManager.csproj",
+              "DocumentMoniker": "C:\\Users\\milutz\\Documents\\Lutz_Grub\\Unterricht\\Unterricht\\CSharp OOP\\ASPTest\\ASPProjects\\DataManager\\DataManager.csproj",
+              "RelativeDocumentMoniker": "DataManager\\DataManager.csproj",
+              "ToolTip": "C:\\Users\\milutz\\Documents\\Lutz_Grub\\Unterricht\\Unterricht\\CSharp OOP\\ASPTest\\ASPProjects\\DataManager\\DataManager.csproj",
+              "RelativeToolTip": "DataManager\\DataManager.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-03T21:43:46.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Crane.cs",
+              "DocumentMoniker": "C:\\Users\\milutz\\Documents\\Lutz_Grub\\Unterricht\\Unterricht\\CSharp OOP\\ASPTest\\ASPProjects\\DataManager\\Crane.cs",
+              "RelativeDocumentMoniker": "DataManager\\Crane.cs",
+              "ToolTip": "C:\\Users\\milutz\\Documents\\Lutz_Grub\\Unterricht\\Unterricht\\CSharp OOP\\ASPTest\\ASPProjects\\DataManager\\Crane.cs",
+              "RelativeToolTip": "DataManager\\Crane.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-03T21:44:06.154Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

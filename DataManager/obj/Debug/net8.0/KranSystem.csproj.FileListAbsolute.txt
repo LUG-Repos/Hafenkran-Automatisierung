@@ -1,0 +1,5 @@
+C:\Users\milutz\Documents\Lutz_Grub\Unterricht\Unterricht\CSharp OOP\ASPTest\ASPProjects\DataManager\obj\Debug\net8.0\KranSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\milutz\Documents\Lutz_Grub\Unterricht\Unterricht\CSharp OOP\ASPTest\ASPProjects\DataManager\obj\Debug\net8.0\KranSystem.AssemblyInfoInputs.cache
+C:\Users\milutz\Documents\Lutz_Grub\Unterricht\Unterricht\CSharp OOP\ASPTest\ASPProjects\DataManager\obj\Debug\net8.0\KranSystem.AssemblyInfo.cs
+C:\Users\milutz\Documents\Lutz_Grub\Unterricht\Unterricht\CSharp OOP\ASPTest\ASPProjects\DataManager\obj\Debug\net8.0\KranSystem.csproj.CoreCompileInputs.cache
+C:\Users\milutz\Documents\Lutz_Grub\Unterricht\Unterricht\CSharp OOP\ASPTest\ASPProjects\DataManager\obj\Debug\net8.0\KranSystem.MvcApplicationPartsAssemblyInfo.cache

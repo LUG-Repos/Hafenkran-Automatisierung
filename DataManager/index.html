@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KranSystem Terminal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:      #0d1117;
+            --panel:   #161b22;
+            --border:  #30363d;
+            --accent:  #00e5ff;
+            --danger:  #f44336;
+            --success: #00e676;
+            --text:    #c9d1d9;
+            --dim:     #6e7681;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        header h1 {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.4rem;
+            color: var(--accent);
+            letter-spacing: 2px;
+        }
+        .status-dot {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background: var(--success);
+            box-shadow: 0 0 8px var(--success);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%,100% { opacity: 1; }
+            50%      { opacity: 0.4; }
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 20px;
+        }
+
+        .panel {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 18px;
+        }
+        .panel-title {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            color: var(--dim);
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .mode-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .mode-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: var(--dim);
+            transition: color .3s;
+        }
+        .mode-label.active { color: var(--accent); }
+
+        .toggle-wrap {
+            position: relative;
+            width: 52px; height: 28px;
+            flex-shrink: 0;
+        }
+        .toggle-wrap input { display: none; }
+        .toggle-track {
+            position: absolute; inset: 0;
+            background: var(--border);
+            border-radius: 14px;
+            cursor: pointer;
+            transition: background .3s;
+        }
+        .toggle-track::after {
+            content: '';
+            position: absolute;
+            width: 20px; height: 20px;
+            top: 4px; left: 4px;
+            background: var(--dim);
+            border-radius: 50%;
+            transition: transform .3s, background .3s;
+        }
+        .toggle-wrap input:checked + .toggle-track { background: #1a3a4a; }
+        .toggle-wrap input:checked + .toggle-track::after {
+            transform: translateX(24px);
+            background: var(--accent);
+            box-shadow: 0 0 8px var(--accent);
+        }
+
+        .joystick {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        .joy-btn {
+            padding: 12px 6px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            background: #1f2937;
+            color: var(--text);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: background .15s, border-color .15s, transform .1s;
+            text-align: center;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        .joy-btn:hover:not(:disabled) {
+            background: #263244;
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        .joy-btn:active:not(:disabled) { transform: scale(0.93); }
+        .joy-btn:disabled {
+            opacity: 0.25;
+            cursor: not-allowed;
+        }
+        .joy-btn.empty {
+            background: transparent;
+            border-color: transparent;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        .grab-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        .btn-grab    { background: #1a3d2b !important; border-color: var(--success) !important; color: var(--success) !important; }
+        .btn-release { background: #3d1a1a !important; border-color: var(--danger)  !important; color: var(--danger)  !important; }
+        .btn-grab:hover:not(:disabled)    { background: #254d38 !important; }
+        .btn-release:hover:not(:disabled) { background: #4d2424 !important; }
+
+        .status-grid { display: grid; gap: 10px; }
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 12px;
+            background: var(--bg);
+            border-radius: 4px;
+            border: 1px solid var(--border);
+        }
+        .stat-key {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--dim);
+        }
+        .stat-val {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--accent);
+            min-width: 70px;
+            text-align: right;
+        }
+
+        .log {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 10px;
+            height: 80px;
+            overflow-y: auto;
+            margin-top: 16px;
+            color: var(--dim);
+        }
+        .log .ok  { color: var(--success); }
+        .log .err { color: var(--danger); }
+
+        .right-col {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            background: #000;
+        }
+
+        .mode-badge {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            padding: 3px 10px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: #1f2937;
+            color: var(--dim);
+            letter-spacing: 1px;
+            transition: all .3s;
+        }
+        .mode-badge.auto {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: #0a2030;
+            box-shadow: 0 0 10px rgba(0,229,255,0.15);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="status-dot"></div>
+    <h1>KRANSYSTEM // TERMINAL</h1>
+    <span class="mode-badge" id="modeBadge">MANUELL</span>
+</header>
+
+<div class="grid">
+
+    <div>
+        <div class="panel">
+            <div class="panel-title">Steuerung</div>
+
+            <div class="mode-row">
+                <span class="mode-label active" id="labelManual">MANUELL</span>
+                <label class="toggle-wrap">
+                    <input type="checkbox" id="modeToggle">
+                    <div class="toggle-track"></div>
+                </label>
+                <span class="mode-label" id="labelAuto">AUTOMATIK</span>
+            </div>
+
+            <div class="joystick">
+                <div class="joy-btn empty"></div>
+                <button class="joy-btn" data-axis="Y" data-val="1">Y+</button>
+                <div class="joy-btn empty"></div>
+
+                <button class="joy-btn" data-axis="X" data-val="-1">X−</button>
+                <button class="joy-btn" data-axis="Z" data-val="1">Z+</button>
+                <button class="joy-btn" data-axis="X" data-val="1">X+</button>
+
+                <div class="joy-btn empty"></div>
+                <button class="joy-btn" data-axis="Y" data-val="-1">Y−</button>
+                <div class="joy-btn empty"></div>
+
+                <button class="joy-btn" data-axis="Z" data-val="-1">Z−</button>
+                <div class="joy-btn empty"></div>
+                <div class="joy-btn empty"></div>
+            </div>
+
+            <div class="grab-row">
+                <button class="joy-btn btn-grab"    id="btnGrab">▼ GRAB</button>
+                <button class="joy-btn btn-release" id="btnRelease">▲ RELEASE</button>
+            </div>
+
+            <div class="log" id="log"><span class="ok">// bereit</span></div>
+        </div>
+    </div>
+
+    <div class="right-col">
+        <div class="panel">
+            <div class="panel-title">Aktuelle Position</div>
+            <div class="status-grid">
+                <div class="stat-row"><span class="stat-key">Crane X</span><span class="stat-val" id="posX">—</span></div>
+                <div class="stat-row"><span class="stat-key">Crane Y</span><span class="stat-val" id="posY">—</span></div>
+                <div class="stat-row"><span class="stat-key">Crane Z</span><span class="stat-val" id="posZ">—</span></div>
+                <div class="stat-row"><span class="stat-key">Grab</span>   <span class="stat-val" id="posGrab">—</span></div>
+            </div>
+        </div>
+
+        <iframe src="engine/index.html" allowfullscreen></iframe>
+    </div>
+</div>
+
+<script>
+    const state = { X: 0, Y: 0, Z: 0, Grab: false };
+    let sendInterval = null;
+
+    const toggle      = document.getElementById('modeToggle');
+    const labelManual = document.getElementById('labelManual');
+    const labelAuto   = document.getElementById('labelAuto');
+    const modeBadge   = document.getElementById('modeBadge');
+    const allBtns     = document.querySelectorAll('.joy-btn:not(.empty)');
+    const log         = document.getElementById('log');
+
+    function addLog(msg, type = '') {
+        const line = document.createElement('div');
+        if (type) line.className = type;
+        line.textContent = msg;
+        log.appendChild(line);
+        if (log.children.length > 50) log.removeChild(log.firstChild);
+        log.scrollTop = log.scrollHeight;
+    }
+
+    // fire-and-forget — kein await, blockiert nicht
+    function sendControl() {
+        fetch('/api/control', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(state)
+        }).then(res => {
+            if (!res.ok) addLog(`// ERR ${res.status}`, 'err');
+        }).catch(e => addLog('// Fehler: ' + e.message, 'err'));
+    }
+
+    toggle.addEventListener('change', () => {
+        const auto = toggle.checked;
+        labelManual.classList.toggle('active', !auto);
+        labelAuto.classList.toggle('active',    auto);
+        modeBadge.textContent = auto ? 'AUTOMATIK' : 'MANUELL';
+        modeBadge.classList.toggle('auto', auto);
+        allBtns.forEach(b => b.disabled = auto);
+        addLog(auto ? '// Modus: AUTOMATIK' : '// Modus: MANUELL');
+    });
+
+    document.querySelectorAll('.joy-btn[data-axis]').forEach(btn => {
+        const axis = btn.dataset.axis;
+        const val  = parseInt(btn.dataset.val);
+
+        const start = () => {
+            state[axis] = val;
+            sendControl();
+            sendInterval = setInterval(sendControl, 50); // 20x/Sekunde
+        };
+        const stop = () => {
+            clearInterval(sendInterval);
+            sendInterval = null;
+            state[axis] = 0;
+            // 0 nur senden wenn kein Axis-Button mehr gedrückt ist
+            if (document.querySelectorAll('.joy-btn[data-axis]:active').length === 0) {
+                sendControl();
+            }
+        };
+
+        btn.addEventListener('mousedown',  start);
+        btn.addEventListener('mouseup',    stop);
+        btn.addEventListener('mouseleave', stop);
+        btn.addEventListener('touchstart', e => { e.preventDefault(); start(); }, { passive: false });
+        btn.addEventListener('touchend',   stop);
+    });
+
+    document.getElementById('btnGrab').addEventListener('click', () => {
+        state.Grab = true;
+        sendControl();
+    });
+    document.getElementById('btnRelease').addEventListener('click', () => {
+        state.Grab = false;
+        sendControl();
+    });
+
+    async function pollAxis() {
+        try {
+            const res  = await fetch('/api/getAxis');
+            if (!res.ok) return;
+            const data = await res.json();
+            document.getElementById('posX').textContent    = (data.X    ?? data.x    ?? '—').toString().substring(0, 8);
+            document.getElementById('posY').textContent    = (data.Y    ?? data.y    ?? '—').toString().substring(0, 8);
+            document.getElementById('posZ').textContent    = (data.Z    ?? data.z    ?? '—').toString().substring(0, 8);
+            document.getElementById('posGrab').textContent = (data.Grab ?? data.grab ?? '—').toString();
+        } catch {}
+    }
+    setInterval(pollAxis, 500);
+    pollAxis();
+</script>
+</body>
+</html>

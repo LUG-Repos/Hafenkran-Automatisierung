@@ -40,6 +40,15 @@ gdjs.Unbenannte_32SzeneCode.GDExplosionObjects3= [];
 gdjs.Unbenannte_32SzeneCode.GDNewSprite11Objects1= [];
 gdjs.Unbenannte_32SzeneCode.GDNewSprite11Objects2= [];
 gdjs.Unbenannte_32SzeneCode.GDNewSprite11Objects3= [];
+gdjs.Unbenannte_32SzeneCode.GDNewTextInputObjects1= [];
+gdjs.Unbenannte_32SzeneCode.GDNewTextInputObjects2= [];
+gdjs.Unbenannte_32SzeneCode.GDNewTextInputObjects3= [];
+gdjs.Unbenannte_32SzeneCode.GDNewText2Objects1= [];
+gdjs.Unbenannte_32SzeneCode.GDNewText2Objects2= [];
+gdjs.Unbenannte_32SzeneCode.GDNewText2Objects3= [];
+gdjs.Unbenannte_32SzeneCode.GDSmallGreenButtonObjects1= [];
+gdjs.Unbenannte_32SzeneCode.GDSmallGreenButtonObjects2= [];
+gdjs.Unbenannte_32SzeneCode.GDSmallGreenButtonObjects3= [];
 
 
 gdjs.Unbenannte_32SzeneCode.eventsList0 = function(runtimeScene) {
@@ -298,7 +307,7 @@ gdjs.copyArray(runtimeScene.getObjects("Explosion"), gdjs.Unbenannte_32SzeneCode
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9627620);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(10600916);
 }
 if (isConditionTrue_0) {
 {runtimeScene.getScene().getVariables().getFromIndex(12).add(1);
@@ -975,7 +984,7 @@ let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("NewText"), gdjs.Unbenannte_32SzeneCode.GDNewTextObjects1);
 {for(var i = 0, len = gdjs.Unbenannte_32SzeneCode.GDNewTextObjects1.length ;i < len;++i) {
-    gdjs.Unbenannte_32SzeneCode.GDNewTextObjects1[i].getBehavior("Text").setText(runtimeScene.getScene().getVariables().getFromIndex(4).getChild("X").getAsString() + " " + runtimeScene.getScene().getVariables().getFromIndex(4).getChild("Y").getAsString() + " " + runtimeScene.getScene().getVariables().getFromIndex(4).getChild("Z").getAsString() + "   " + runtimeScene.getScene().getVariables().getFromIndex(5).getChild("x").getAsString() + " " + runtimeScene.getScene().getVariables().getFromIndex(5).getChild("y").getAsString() + " " + runtimeScene.getScene().getVariables().getFromIndex(5).getChild("z").getAsString() + runtimeScene.getScene().getVariables().getFromIndex(4).getChild("grap").getAsString() + runtimeScene.getScene().getVariables().getFromIndex(6).getChild("y").getAsString() + " AXIS" + runtimeScene.getScene().getVariables().getFromIndex(0).getAsString() + runtimeScene.getScene().getVariables().getFromIndex(1).getAsString() + runtimeScene.getScene().getVariables().getFromIndex(2).getAsString());
+    gdjs.Unbenannte_32SzeneCode.GDNewTextObjects1[i].getBehavior("Text").setText("Current PORT: " + runtimeScene.getScene().getVariables().getFromIndex(13).getAsString());
 }
 }
 }
@@ -1142,9 +1151,9 @@ let isConditionTrue_0 = false;
 
 let isConditionTrue_0 = false;
 {
-{gdjs.evtTools.network.sendAsyncRequest("https://localhost:7264/api/data", "{" + "'CraneX' : " + runtimeScene.getScene().getVariables().getFromIndex(4).getChild("X").getAsString() + "," + "'CraneY' : " + runtimeScene.getScene().getVariables().getFromIndex(4).getChild("Y").getAsString() + "," + "'CraneZ' : " + runtimeScene.getScene().getVariables().getFromIndex(4).getChild("Z").getAsString() + "," + "'CraneGrab' : " + runtimeScene.getScene().getVariables().getFromIndex(4).getChild("grap").getAsString() + "," + "'KontainerX' : " + runtimeScene.getScene().getVariables().getFromIndex(5).getChild("x").getAsString() + "," + "'KontainerY' : " + runtimeScene.getScene().getVariables().getFromIndex(5).getChild("y").getAsString() + "," + "'KontainerZ' : " + runtimeScene.getScene().getVariables().getFromIndex(5).getChild("z").getAsString() + "," + "'KontainerPickedUp' : " + runtimeScene.getScene().getVariables().getFromIndex(5).getChild("picked").getAsString() + "," + "'KontainerExists' : " + runtimeScene.getScene().getVariables().getFromIndex(5).getChild("vorhanden").getAsString() + "," + "'TrainX' : " + runtimeScene.getScene().getVariables().getFromIndex(6).getChild("x").getAsString() + "," + "'TrainY' : " + runtimeScene.getScene().getVariables().getFromIndex(6).getChild("y").getAsString() + "," + "'TrainZ' : " + runtimeScene.getScene().getVariables().getFromIndex(6).getChild("z").getAsString() + "," + "'TrainLoaded' : " + runtimeScene.getScene().getVariables().getFromIndex(6).getChild("Loaded").getAsString() + "}", "POST", "", runtimeScene.getScene().getVariables().getFromIndex(7), runtimeScene.getScene().getVariables().getFromIndex(7));
+{gdjs.evtTools.network.sendAsyncRequest("https://localhost:" + runtimeScene.getScene().getVariables().getFromIndex(13).getAsString() + "/api/data", "{" + "'CraneX' : " + runtimeScene.getScene().getVariables().getFromIndex(4).getChild("X").getAsString() + "," + "'CraneY' : " + runtimeScene.getScene().getVariables().getFromIndex(4).getChild("Y").getAsString() + "," + "'CraneZ' : " + runtimeScene.getScene().getVariables().getFromIndex(4).getChild("Z").getAsString() + "," + "'CraneGrab' : " + runtimeScene.getScene().getVariables().getFromIndex(4).getChild("grap").getAsString() + "," + "'KontainerX' : " + runtimeScene.getScene().getVariables().getFromIndex(5).getChild("x").getAsString() + "," + "'KontainerY' : " + runtimeScene.getScene().getVariables().getFromIndex(5).getChild("y").getAsString() + "," + "'KontainerZ' : " + runtimeScene.getScene().getVariables().getFromIndex(5).getChild("z").getAsString() + "," + "'KontainerPickedUp' : " + runtimeScene.getScene().getVariables().getFromIndex(5).getChild("picked").getAsString() + "," + "'KontainerExists' : " + runtimeScene.getScene().getVariables().getFromIndex(5).getChild("vorhanden").getAsString() + "," + "'TrainX' : " + runtimeScene.getScene().getVariables().getFromIndex(6).getChild("x").getAsString() + "," + "'TrainY' : " + runtimeScene.getScene().getVariables().getFromIndex(6).getChild("y").getAsString() + "," + "'TrainZ' : " + runtimeScene.getScene().getVariables().getFromIndex(6).getChild("z").getAsString() + "," + "'TrainLoaded' : " + runtimeScene.getScene().getVariables().getFromIndex(6).getChild("Loaded").getAsString() + "}", "POST", "", runtimeScene.getScene().getVariables().getFromIndex(7), runtimeScene.getScene().getVariables().getFromIndex(7));
 }
-{gdjs.evtTools.network.sendAsyncRequest("https://localhost:7264/api/getAxis", "", "GET", "", runtimeScene.getScene().getVariables().getFromIndex(8), runtimeScene.getScene().getVariables().getFromIndex(11));
+{gdjs.evtTools.network.sendAsyncRequest("https://localhost:" + runtimeScene.getScene().getVariables().getFromIndex(13).getAsString() + "/api/getAxis", "", "GET", "", runtimeScene.getScene().getVariables().getFromIndex(8), runtimeScene.getScene().getVariables().getFromIndex(11));
 }
 {gdjs.evtTools.network.jsonToVariableStructure(runtimeScene.getScene().getVariables().getFromIndex(8).getAsString(), runtimeScene.getScene().getVariables().getFromIndex(9));
 }
@@ -1268,6 +1277,29 @@ if (isConditionTrue_0) {
 }
 
 
+{
+
+gdjs.copyArray(runtimeScene.getObjects("SmallGreenButton"), gdjs.Unbenannte_32SzeneCode.GDSmallGreenButtonObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.Unbenannte_32SzeneCode.GDSmallGreenButtonObjects1.length;i<l;++i) {
+    if ( gdjs.Unbenannte_32SzeneCode.GDSmallGreenButtonObjects1[i].IsClicked(null) ) {
+        isConditionTrue_0 = true;
+        gdjs.Unbenannte_32SzeneCode.GDSmallGreenButtonObjects1[k] = gdjs.Unbenannte_32SzeneCode.GDSmallGreenButtonObjects1[i];
+        ++k;
+    }
+}
+gdjs.Unbenannte_32SzeneCode.GDSmallGreenButtonObjects1.length = k;
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("NewTextInput"), gdjs.Unbenannte_32SzeneCode.GDNewTextInputObjects1);
+{runtimeScene.getScene().getVariables().getFromIndex(13).setString((( gdjs.Unbenannte_32SzeneCode.GDNewTextInputObjects1.length === 0 ) ? "" :gdjs.Unbenannte_32SzeneCode.GDNewTextInputObjects1[0].getBehavior("Text").getText()));
+}
+}
+
+}
+
+
 };
 
 gdjs.Unbenannte_32SzeneCode.func = function(runtimeScene) {
@@ -1312,6 +1344,15 @@ gdjs.Unbenannte_32SzeneCode.GDExplosionObjects3.length = 0;
 gdjs.Unbenannte_32SzeneCode.GDNewSprite11Objects1.length = 0;
 gdjs.Unbenannte_32SzeneCode.GDNewSprite11Objects2.length = 0;
 gdjs.Unbenannte_32SzeneCode.GDNewSprite11Objects3.length = 0;
+gdjs.Unbenannte_32SzeneCode.GDNewTextInputObjects1.length = 0;
+gdjs.Unbenannte_32SzeneCode.GDNewTextInputObjects2.length = 0;
+gdjs.Unbenannte_32SzeneCode.GDNewTextInputObjects3.length = 0;
+gdjs.Unbenannte_32SzeneCode.GDNewText2Objects1.length = 0;
+gdjs.Unbenannte_32SzeneCode.GDNewText2Objects2.length = 0;
+gdjs.Unbenannte_32SzeneCode.GDNewText2Objects3.length = 0;
+gdjs.Unbenannte_32SzeneCode.GDSmallGreenButtonObjects1.length = 0;
+gdjs.Unbenannte_32SzeneCode.GDSmallGreenButtonObjects2.length = 0;
+gdjs.Unbenannte_32SzeneCode.GDSmallGreenButtonObjects3.length = 0;
 
 gdjs.Unbenannte_32SzeneCode.eventsList5(runtimeScene);
 gdjs.Unbenannte_32SzeneCode.GDNewSpriteObjects1.length = 0;
@@ -1353,6 +1394,15 @@ gdjs.Unbenannte_32SzeneCode.GDExplosionObjects3.length = 0;
 gdjs.Unbenannte_32SzeneCode.GDNewSprite11Objects1.length = 0;
 gdjs.Unbenannte_32SzeneCode.GDNewSprite11Objects2.length = 0;
 gdjs.Unbenannte_32SzeneCode.GDNewSprite11Objects3.length = 0;
+gdjs.Unbenannte_32SzeneCode.GDNewTextInputObjects1.length = 0;
+gdjs.Unbenannte_32SzeneCode.GDNewTextInputObjects2.length = 0;
+gdjs.Unbenannte_32SzeneCode.GDNewTextInputObjects3.length = 0;
+gdjs.Unbenannte_32SzeneCode.GDNewText2Objects1.length = 0;
+gdjs.Unbenannte_32SzeneCode.GDNewText2Objects2.length = 0;
+gdjs.Unbenannte_32SzeneCode.GDNewText2Objects3.length = 0;
+gdjs.Unbenannte_32SzeneCode.GDSmallGreenButtonObjects1.length = 0;
+gdjs.Unbenannte_32SzeneCode.GDSmallGreenButtonObjects2.length = 0;
+gdjs.Unbenannte_32SzeneCode.GDSmallGreenButtonObjects3.length = 0;
 
 
 return;

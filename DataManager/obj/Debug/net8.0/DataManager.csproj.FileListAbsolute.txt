@@ -22,3 +22,4 @@ C:\Users\milutz\Documents\Lutz_Grub\Unterricht\Unterricht\CSharp OOP\ASPTest\ASP
 C:\Users\milutz\Documents\Lutz_Grub\Unterricht\Unterricht\CSharp OOP\ASPTest\ASPProjects\DataManager\obj\Debug\net8.0\DataManager.pdb
 C:\Users\milutz\Documents\Lutz_Grub\Unterricht\Unterricht\CSharp OOP\ASPTest\ASPProjects\DataManager\obj\Debug\net8.0\DataManager.genruntimeconfig.cache
 C:\Users\milutz\Documents\Lutz_Grub\Unterricht\Unterricht\CSharp OOP\ASPTest\ASPProjects\DataManager\obj\Debug\net8.0\ref\DataManager.dll
+C:\Users\milutz\Documents\Lutz_Grub\Unterricht\Unterricht\CSharp OOP\ASPTest\ASPProjects\DataManager\obj\Debug\net8.0\DataManager.sourcelink.json

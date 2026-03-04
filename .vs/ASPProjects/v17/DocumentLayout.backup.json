@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\milutz\\Documents\\Lutz_Grub\\Unterricht\\Unterricht\\CSharp OOP\\ASPTest\\ASPProjects\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A448A080-E5B2-4FE5-869B-63272728F52A}|DataManager\\DataManager.csproj|c:\\users\\milutz\\documents\\lutz_grub\\unterricht\\unterricht\\csharp oop\\asptest\\aspprojects\\datamanager\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A448A080-E5B2-4FE5-869B-63272728F52A}|DataManager\\DataManager.csproj|solutionrelative:datamanager\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{B5477419-F92E-154A-7D76-FD7A7FB492E6}|DataManager\\DataManager.csproj|c:\\users\\milutz\\documents\\lutz_grub\\unterricht\\unterricht\\csharp oop\\asptest\\aspprojects\\datamanager\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B5477419-F92E-154A-7D76-FD7A7FB492E6}|DataManager\\DataManager.csproj|solutionrelative:datamanager\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A448A080-E5B2-4FE5-869B-63272728F52A}|DataManager\\DataManager.csproj|c:\\users\\milutz\\documents\\lutz_grub\\unterricht\\unterricht\\csharp oop\\asptest\\aspprojects\\datamanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A448A080-E5B2-4FE5-869B-63272728F52A}|DataManager\\DataManager.csproj|solutionrelative:datamanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A448A080-E5B2-4FE5-869B-63272728F52A}|DataManager\\DataManager.csproj|c:\\users\\milutz\\documents\\lutz_grub\\unterricht\\unterricht\\csharp oop\\asptest\\aspprojects\\datamanager\\datamanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A448A080-E5B2-4FE5-869B-63272728F52A}|DataManager\\DataManager.csproj|solutionrelative:datamanager\\datamanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A448A080-E5B2-4FE5-869B-63272728F52A}|DataManager\\DataManager.csproj|c:\\users\\milutz\\documents\\lutz_grub\\unterricht\\unterricht\\csharp oop\\asptest\\aspprojects\\datamanager\\crane.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A448A080-E5B2-4FE5-869B-63272728F52A}|DataManager\\DataManager.csproj|solutionrelative:datamanager\\crane.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5477419-F92E-154A-7D76-FD7A7FB492E6}|DataManager\\DataManager.csproj|c:\\users\\milutz\\documents\\lutz_grub\\unterricht\\unterricht\\csharp oop\\asptest\\aspprojects\\datamanager\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B5477419-F92E-154A-7D76-FD7A7FB492E6}|DataManager\\DataManager.csproj|solutionrelative:datamanager\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\milutz\\Documents\\Lutz_Grub\\Unterricht\\Unterricht\\CSharp OOP\\ASPTest\\ASPProjects\\DataManager\\Program.cs",
-              "RelativeDocumentMoniker": "DataManager\\Program.cs",
-              "ToolTip": "C:\\Users\\milutz\\Documents\\Lutz_Grub\\Unterricht\\Unterricht\\CSharp OOP\\ASPTest\\ASPProjects\\DataManager\\Program.cs",
-              "RelativeToolTip": "DataManager\\Program.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T12:31:39.142Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\milutz\\Documents\\Lutz_Grub\\Unterricht\\Unterricht\\CSharp OOP\\ASPTest\\ASPProjects\\DataManager\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "DataManager\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\milutz\\Documents\\Lutz_Grub\\Unterricht\\Unterricht\\CSharp OOP\\ASPTest\\ASPProjects\\DataManager\\Properties\\launchSettings.json*",
-              "RelativeToolTip": "DataManager\\Properties\\launchSettings.json*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAUAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\milutz\\Documents\\Lutz_Grub\\Unterricht\\Unterricht\\CSharp OOP\\ASPTest\\ASPProjects\\DataManager\\Properties\\launchSettings.json",
+              "RelativeToolTip": "DataManager\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-04T08:49:22.058Z",
+              "WhenOpened": "2026-03-04T09:22:57.675Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DataManager.csproj",
-              "DocumentMoniker": "C:\\Users\\milutz\\Documents\\Lutz_Grub\\Unterricht\\Unterricht\\CSharp OOP\\ASPTest\\ASPProjects\\DataManager\\DataManager.csproj",
-              "RelativeDocumentMoniker": "DataManager\\DataManager.csproj",
-              "ToolTip": "C:\\Users\\milutz\\Documents\\Lutz_Grub\\Unterricht\\Unterricht\\CSharp OOP\\ASPTest\\ASPProjects\\DataManager\\DataManager.csproj",
-              "RelativeToolTip": "DataManager\\DataManager.csproj",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\milutz\\Documents\\Lutz_Grub\\Unterricht\\Unterricht\\CSharp OOP\\ASPTest\\ASPProjects\\DataManager\\appsettings.json",
+              "RelativeDocumentMoniker": "DataManager\\appsettings.json",
+              "ToolTip": "C:\\Users\\milutz\\Documents\\Lutz_Grub\\Unterricht\\Unterricht\\CSharp OOP\\ASPTest\\ASPProjects\\DataManager\\appsettings.json",
+              "RelativeToolTip": "DataManager\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-03T21:43:46.559Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Crane.cs",
-              "DocumentMoniker": "C:\\Users\\milutz\\Documents\\Lutz_Grub\\Unterricht\\Unterricht\\CSharp OOP\\ASPTest\\ASPProjects\\DataManager\\Crane.cs",
-              "RelativeDocumentMoniker": "DataManager\\Crane.cs",
-              "ToolTip": "C:\\Users\\milutz\\Documents\\Lutz_Grub\\Unterricht\\Unterricht\\CSharp OOP\\ASPTest\\ASPProjects\\DataManager\\Crane.cs",
-              "RelativeToolTip": "DataManager\\Crane.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T21:44:06.154Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-04T09:22:55.495Z"
             }
           ]
         }
